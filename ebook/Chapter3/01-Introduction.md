@@ -1,0 +1,4 @@
+## 导读
+
+在本章, we will lead you through the initial objectives and requirements for performing enumeration and scanning in support of a penetration test or vulnerability assessment. After that, you will dig into some scenarios in which you will see how
+ you can use these different tools and techniques to their full advantage. In this chapter, we will discuss the process of enumeration and scanning more so than the technical details.We’ll primarily use Netcat, Scanrand, and Nmap for brief examples to illustrate points. Please see Chapters 2 and 5 for detailed information on enumeration and scanning using Netcat. 

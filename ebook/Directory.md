@@ -1,0 +1,227 @@
+目录
+=====
+
+- 第一章：[介绍Netcat](Chapter1/)
+    - [介绍](Chapter1/01-Introduction.md)
+    - [安装](Chapter1/02-Installation.md)
+        - 在Windows上
+        - 在Linux上
+        - 作为包安装
+        - 从源码安装
+        - 验证安装
+    - [命令选项](Chapter1/03-Netcat-Command-Options.md)
+        - 操作模式
+        - 常用命令选项
+        - 重定向工具
+    - [基本操作](Chapter1/04-Basic-Operations.md)
+        - 简易聊天界面
+        - 端口扫描
+        - 文件传输
+        - banner 抓取
+        - 重定向端口和流量
+        - 其他用法
+    - [归纳总结](Chapter1/05-Summary.md)
+    - [快速问题追踪](Chapter1/06-Solutions-Fast-Track.md)
+    - [常见问答](Chapter1/07-Frequently-Asked-Questions.md) 
+
+- 第二章：[Netcat的渗透测试](Chapter2/)
+    - [介绍](Chapter2/01-Introduction.md)
+    - [端口扫描和服务识别](Chapter2/02-Port-Scanning-and-Service-Identification.md)
+        - 作为端口扫描工具
+        - 抓取banner
+        - 使用脚本让netcat识别多个Web服务器
+        - 服务识别
+        - 测试出口防火墙
+        - System.B.-.The.System.on.the.Outside.of.the.Firewall
+        - System.A.-.The.System.on.the.Inside.of.the.Firewall
+    - [在 Windows 系统上的规避检测](Chapter2/03-Avoiding-Detection-on-a-Windows-System.md)
+        - Evading.the.Windows.XP/Windows.2003.Server.Firewall
+        - Example
+        - Making.Firewall.Exceptions.using.Netsh.Commands
+            - Determining.the.State.of.the.Firewall
+        - Evading.Antivirus.Detection
+        - Recompiling.Netcat
+    - [在 Windows XP/ Windows 2003 Server 上创建后门](Chapter2/04-Creating-a-Netcat-Backdoor-on-a-Windows-XP-or-Windows-2003-Server.md)
+        - 后门连接方式
+        - 直接连接到后门
+            - 这种方式的好处
+            - 这种方式的弊端
+        - 被动连接到后门
+            - 这种方式的好处
+            - 这种方式的弊端
+        - 后门执行方式
+        - 通过注册表执行后门
+            - 这种方式的好处
+            - 这种方式的弊端
+        - 通过 Windows 服务执行后门
+            - 这种方式的好处
+            - 这种方式的弊端
+        - 通过 Windows 定时任务执行后门
+            - 这种方式的好处
+        - 后门执行总结
+    - [归纳总结](Chapter2/05-Summary.md)
+        - Port Scanning and Service Identification
+        - Egress Firewall Testing 
+        - Avoid Detection on a Windows System 
+        - Creating a Netcat Backdoor on a Windows XP or Windows 2003 Server
+    - [快速问题追踪](Chapter2/06-Solutions-Fast-Track.md)
+    - [常见问答](Chapter2/07-Frequently-Asked-Questions.md) 
+
+
+- 第三章：[Netcat结合Nmap来探测和扫描](Chapter3/)
+
+    - [介绍](Chapter3/01-Introduction.md)
+    - [目标](Chapter3/02-Objectives.md)
+        - 开始之前
+        - 为什么这样做？
+    - [方法](Chapter3/03-Approach.md)
+        - 扫描
+        - 枚举
+        - Notes.and.Documentation
+        - Active.versus.Passive
+        - Moving.On
+    - [核心技术](Chapter3/04-Core-Technology.md)
+        - How.Scanning.Works
+        - Port.Scanning
+        - Going.behind.the.Scenes.with.Enumeration
+        - 服务识别
+        - RPC.Enumeration
+        - Fingerprinting
+        - Being.Loud,.Quiet,.and.All.That.Lies.Between
+        - Timing
+        - Bandwidth.Issues
+        - Unusual.Packet.Formation
+    - [其他的开源工具](Chapter3/05-Open-Source-Tools.md)
+        - Scanning
+        - Nmap
+            - Nmap:.Ping.Sweep
+            - Nmap:.ICMP.Options
+            - Nmap:.Output.Options
+            - Nmap:.Stealth.Scanning
+            - Nmap:.OS.Fingerprinting
+            - Nmap:.Scripting
+            - Nmap:.Speed.Options
+        - Netenum:.Ping.Sweep
+        - Unicornscan:.Port.Scan.and.Fuzzing
+        - Scanrand:.Port.Scan
+        - Enumeration
+        - Nmap:.Banner.Grabbing
+        - Netcat
+        - P0f:.Passive.OS.Fingerprinting
+        - Xprobe2:.OS.Fingerprinting
+        - Httprint
+        - Ike-scan:.VPN.Assessment
+        - Amap:.Application.Version.Detection
+        - Windows.Enumeration:.Smbgetserverinfo/smbdumpusers/smbclient
+
+
+- 第四章：[使用Netcat获取banner](Chapter4/)
+
+    - [介绍](Chapter4/01-Introduction.md)
+    - [获取banner的目的](Chapter4/02-Benefits-of-Banner-Grabbing.md)
+        - Benefits.for.the.Server.Owner
+            - Finding.Unauthorized.Servers
+        - Benefits.for.a.Network.Attacker
+            - Why.Not.Nmap?
+    - [基本的banner获取](Chapter4/03-Benefits-of-Banner-Grabbing.md)
+        - Web.Servers.(HTTP)
+            - Acquiring.Just.the.Header
+            - Dealing.With.Obfuscated.Banners
+                - Apache.ServerTokens
+                - Reading.the.Subtle.Clues.in.an.Obfuscated.Header
+            - HTTP.1 .0.vs ..HTTP.1 .1
+            - Secure.HTTP.servers.(HTTPS)
+        - File.Transfer.Protocol.(FTP).Servers
+            - Immense.FTP.Payloads
+        - E-mail.Servers
+            - Post.Office.Protocol.(POP).Servers
+            - Simple.Mail.Transport.Protocol.(SMTP).Servers
+                - So,.Back.to.the.Banner.Grabbing
+                - Fingerprinting.SMTP.Server.Responses
+            - How.to.Modify.your.E-mail.Banners
+                - Sendmail.Banners
+                - Microsoft.Exchange.SMTP.Banners
+                - Microsoft.Exchange.POP.and.IMAP.Banners
+        - Secure.Shell.(SSH).Servers
+            - Hiding.the.SSH.Banner
+    - [用数据包嗅探工具获取banner](Chapter4/04-Banner-Grabbing-with-a-Packet-Sniffer.md)
+    - [归纳总结](Chapter2/05-Summary.md)
+    - [快速问题追踪](Chapter2/06-Solutions-Fast-Track.md)
+    - [常见问答](Chapter2/07-Frequently-Asked-Questions.md) 
+
+
+- 第五章：[Netcat的黑科技](Chapter5)
+
+    - [介绍](Chapter5/01-Introduction.md)
+    - [在系统内嗅探流量](Chapter5/02-Sniffing-Traffic-within-a-System.md)
+        - Sniffing.Traffic.by.Relocating.a.Service
+        - Sniffing.Traffic.without.Relocating.a.Service
+    - [rogue隧道攻击](Chapter5/03-Rogue-Tunnel-Attacks.md)
+        - Connecting.Through.a.Pivot.System](Chapter5/01-Introduction.md)
+        - [Transferring.Files](Chapter5/)
+            - Using.Secure.Shell
+            - Using.Redirection
+        - Man-in-the-middle.Attacks
+    - [运行后门和shell](Chapter5/04-Backdoors-and-Shell-Shoveling.md)
+        - Backdoors
+        - Shell.Shoveling
+            - Shoveling.with.No.Direct.Connection.to.Target
+            - Shoveling.with.Direct.Connection.to.Target
+    - [在windows上的Netcat](Chapter5/05-Netcat-on-Windows.md)
+    - [归纳总结](Chapter2/09-Summary.md)
+
+
+
+- 第六章：[用Netcat传送文件](Chapter6)
+
+    - [介绍](Chapter6/01-Introduction.md)
+    - [什么时候可以用netcat传送文件](Chapter6/02-When.to.Use.Netcat.to.Transfer.Files.md)
+        - Sometimes.Less.Really.is.Less
+        - Where.Netcat.Shines
+    - [基本文件传输](Chapter6/03-Performing.Basic.File.Transfers.md)
+        - Transferring.Files.with.the.Original.Netcat
+            - Closing.Netcat.When.the.Transfer.is.Completed
+            - Other.Options.and.Considerations
+                - Timing.Transfers,.Throughput,.etc...
+                - Tunneling.a.Transfer.Through.an.Intermediary
+    - [使用Netcat的变种程序](Chapter6/04-Using.Netcat.Variants.md)
+        - Cryptcat
+        - GNU.Netcat
+        - SBD
+        - Socat
+            - Socat.Basics
+            - Transferring.Files.with.Socat
+            - Encryption
+            - Mixing.and.Matching
+    - [保证文件可信性](Chapter6/05-Ensuring.File.Confidentiality.md)
+        - Using.OpenSSH
+            - Installing.and.Configuring.Secure.Shell
+            - Configuring.OpenSSH.Port.Forwarding
+        - Using.SSL
+            - Configuring.Stunnel
+        - Using.IPsec
+            - Configuring.IPSec.on.Windows
+            - Configuring.IPSec.on.Linux
+    - [保证文件完整性](Chapter6/06-Ensuring.File.Integrity.md)
+        - Hashing.Tools
+    - [使用Netcat来测试](Chapter6/07-Using.Netcat.for.Testing.md)
+        - Testing.Bandwidth
+        - Testing.Connectivity
+    - [归纳总结](Chapter6/08-Summary.md)
+    - [快速问题追踪](Chapter6/09-Solutions-Fast-Track.md)
+    - [常见问答](Chapter6/10-Frequently-Asked-Questions.md)
+- 第七章：[用Netcat排除错误](Chapter7/)
+
+    - [介绍](Chapter7/01-Introduction.md)
+    - [扫描系统](Chapter7/02-Scanning-a-System.md)
+    - [检测网络延迟](Chapter7/03-Testing-Network-Latency.md)
+        - Using.Netcat.as.a.Listener.on.Our.Target.System
+        - Using.a.Pre-existing.Service.on.Our.Target.System
+            - Using.a.UDP.Service
+            - Using.a.TCP.Service
+    - [应用程序的连通性](Chapter7/04-Application-Connectivity.md)
+        - Troubleshooting.HTTP
+        - Troubleshooting.FTP
+            - Troubleshooting.Active.FTP.Transfers.Using.Netcat
+            - Troubleshooting.Passive.FTP.Transfers.using.Netcat
+    - [归纳总结](Chapter7/05-Summary.md)
