@@ -36,12 +36,18 @@ A：当然。在Windows，用-L选项，当Netcat关闭的时候，会用相同�
 
 
 
-Q：如果能做[über-leet的功能]，Netcat还可以变的更吊(cooler)。我该怎么做呢？
+Q：如果能做[über-leet的功能]，Netcat还可以变的更吊。我该怎么做呢？
 
-A：Netcat是开源的。这意味着你可以下载源码，修改以满足你的需求(to your delight)，然后编译你的über-leet功能。
+A：Netcat是开源的。这意味着你可以下载源码，修改以满足你的需求，然后编译你的über-leet功能。
 
 
 
-Q：我在哪能找到有关Netcat的更多信息咧？
+Q：我在哪能找到有关Netcat的更多信息呢？
 
 A：首先，请参考本书的剩余章节。本丛书作者(the contributing authors)是知识渊博，在各自领域的专家。其次，Google it。在互联网上，有大量的(a wide range of)有关Netcat的文档和教程(tutorials)。第三，找到一个有关的论坛，贴出问题。如果你知道怎么样问问题(如何问好一个问题)，那里会有很多人愿意帮助你。
+
+
+
+## 链接
+
+- [目录](../directory.md)
